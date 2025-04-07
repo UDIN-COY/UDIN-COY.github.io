@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <!-- Konfigurasi Dasar - Meta tags dan resources -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools untuk Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Menu Navigasi - Akses ke halaman website -->
+  <nav class="navbar">
+    <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="html.html">HTML</a>
+      <a href="kamus.html">Kamus HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="kamus-css.html">Kamus CSS</a>
+      <a href="tools.html" class="active">Tools</a>
+      <a href="tips.html">Tips</a>
+      <a href="about.html">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- Header Tools - Judul dan filter kategori -->
+  <header class="revamp-header">
+    <h1>🛠️ Web Development Tools</h1>
+    <p>Tools penting untuk pengembangan web modern</p>
+    <!-- Filter Kategori - Pemilihan jenis tools -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">Semua</button>
+      <button class="filter-btn" data-category="editor">Code Editor</button>
+      <button class="filter-btn" data-category="version">Version Control</button>
+      <button class="filter-btn" data-category="debug">Debug Tools</button>
+      <button class="filter-btn" data-category="server">Local Server</button>
+    </div>
+  </header>
+
+  <!-- Daftar Tools - Grid tampilan tools -->
+  <main class="page-transition">
+    <div class="container">
+      <div class="tools-grid">
+        <!-- Local Server Tools - XAMPP & Laragon -->
+        <article class="tool-card glass" data-category="server">
+          <header class="tool-header">
+            <div class="tool-icon">
+              <img src="https://www.apachefriends.org/images/xampp-logo-ac950edf.svg" alt="XAMPP Logo" class="tool-logo">
+            </div>
+            <div class="tool-title-group">
+              <h3>XAMPP</h3>
+              <span class="tool-badge">Local Server</span>
+            </div>
+          </header>
+          
+          <div class="tool-content">
+            <p class="tool-description">Paket software yang berisi Apache, MySQL, PHP untuk pengembangan web lokal.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i>Apache Web Server</li>
+              <li><i class="fas fa-check"></i>MySQL Database</li>
+              <li><i class="fas fa-check"></i>PHP Interpreter</li>
+              <li><i class="fas fa-check"></i>phpMyAdmin</li>
+            </ul>
+            <div class="tool-actions">
+              <a href="https://www.apachefriends.org/" class="btn-primary" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i> Download XAMPP
+              </a>
+              <a href="https://www.apachefriends.org/docs/" class="btn-secondary" target="_blank" rel="noopener">
+                <i class="fas fa-book"></i> Dokumentasi
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Laragon - Alternative local server -->
+        <article class="tool-card glass" data-category="server">
+          <header class="tool-header">
+            <div class="tool-icon">
+              <img src="https://laragon.org/logo.svg" alt="Laragon Logo" class="tool-logo">
+            </div>
+            <div class="tool-title-group">
+              <h3>Laragon</h3>
+              <span class="tool-badge">Local Server</span>
+            </div>
+          </header>
+          
+          <div class="tool-content">
+            <p class="tool-description">Modern dan ringan untuk pengembangan web lokal dengan fitur auto virtual host.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i>Auto Virtual Host</li>
+              <li><i class="fas fa-check"></i>Multiple PHP Versions</li>
+              <li><i class="fas fa-check"></i>Quick Create Project</li>
+              <li><i class="fas fa-check"></i>Built-in Terminal</li>
+            </ul>
+            <div class="tool-actions">
+              <a href="https://laragon.org/download/" class="btn-primary" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i> Download Laragon
+              </a>
+              <a href="https://laragon.org/docs/" class="btn-secondary" target="_blank" rel="noopener">
+                <i class="fas fa-book"></i> Dokumentasi
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Code Editor Tools - Notepad++ & VS Code -->
+        <article class="tool-card glass" data-category="editor">
+          <header class="tool-header">
+            <div class="tool-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Notepad%2B%2B_Logo.svg" alt="Notepad++ Logo" class="tool-logo">
+            </div>
+            <div class="tool-title-group">
+              <h3>Notepad++</h3>
+              <span class="tool-badge">Text Editor</span>
+            </div>
+          </header>
+          
+          <div class="tool-content">
+            <p class="tool-description">Editor teks ringan dan cepat dengan fitur untuk pengembangan web.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i>Syntax Highlighting</li>
+              <li><i class="fas fa-check"></i>Multi-Document Interface</li>
+              <li><i class="fas fa-check"></i>Plugin Support</li>
+              <li><i class="fas fa-check"></i>Find & Replace</li>
+            </ul>
+            <div class="tool-actions">
+              <a href="https://notepad-plus-plus.org/downloads/" class="btn-primary" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i> Download Notepad++
+              </a>
+              <a href="https://npp-user-manual.org/" class="btn-secondary" target="_blank" rel="noopener">
+                <i class="fas fa-book"></i> Manual
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- VS Code - Modern code editor -->
+        <article class="tool-card glass" data-category="editor">
+          <header class="tool-header">
+            <div class="tool-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo" class="tool-logo">
+            </div>
+            <div class="tool-title-group">
+              <h3>Visual Studio Code</h3>
+              <span class="tool-badge">Code Editor</span>
+            </div>
+          </header>
+          
+          <div class="tool-content">
+            <p class="tool-description">Editor kode modern dengan fitur lengkap untuk web development.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i>IntelliSense & Auto-completion</li>
+              <li><i class="fas fa-check"></i>Git Integration</li>
+              <li><i class="fas fa-check"></i>Live Server Preview</li>
+              <li><i class="fas fa-check"></i>Extension Marketplace</li>
+            </ul>
+            <div class="tool-actions">
+              <a href="https://code.visualstudio.com" class="btn-primary" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i> Download
+              </a>
+              <a href="https://code.visualstudio.com/docs" class="btn-secondary">
+                <i class="fas fa-book"></i> Dokumentasi
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Version Control - Git & GitHub -->
+        <article class="tool-card glass" data-category="version">
+          <header class="tool-header">
+            <div class="tool-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="tool-title-group">
+              <h3>Git & GitHub</h3>
+              <span class="tool-badge">Version Control</span>
+            </div>
+          </header>
+          
+          <div class="tool-content">
+            <p class="tool-description">Sistem kontrol versi untuk mengelola perubahan kode dan kolaborasi tim.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i>Repository Management</li>
+              <li><i class="fas fa-check"></i>Branch & Merge</li>
+              <li><i class="fas fa-check"></i>Team Collaboration</li>
+              <li><i class="fas fa-check"></i>Code Review</li>
+            </ul>
+            <div class="tool-actions">
+              <a href="https://git-scm.com" class="btn-primary" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i> Download Git
+              </a>
+              <a href="https://github.com" class="btn-secondary" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Debug Tools - Chrome DevTools -->
+        <article class="tool-card glass" data-category="debug">
+          <header class="tool-header">
+            <div class="tool-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <div class="tool-title-group">
+              <h3>Chrome DevTools</h3>
+              <span class="tool-badge">Debug Tools</span>
+            </div>
+          </header>
+          
+          <div class="tool-content">
+            <p class="tool-description">Tools bawaan browser untuk debug dan optimasi website.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i>Elements Inspector</li>
+              <li><i class="fas fa-check"></i>Console Debugging</li>
+              <li><i class="fas fa-check"></i>Network Analysis</li>
+              <li><i class="fas fa-check"></i>Performance Monitor</li>
+            </ul>
+            <div class="tool-actions">
+              <a href="#" class="btn-primary">
+                <i class="fas fa-book"></i> Panduan
+              </a>
+              <a href="#" class="btn-secondary">
+                <i class="fas fa-video"></i> Tutorial
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer - Copyright -->
+  <footer>
+    &copy; 2025 Web Edukasi Mini - Dibuat dengan ❤️ oleh Muhammad Syafri
+  </footer>
+
+  <!-- Script Filter - Fungsi filter tools -->
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        const category = btn.dataset.category;
+        document.querySelectorAll('.tool-card').forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

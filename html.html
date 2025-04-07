@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Bagian Head: Konfigurasi metadata dan resources -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigasi - Menu untuk berpindah antar halaman pembelajaran -->
+    <nav class="navbar">
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="html.html" class="active">HTML</a>
+            <a href="kamus.html">Kamus HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="kamus-css.html">Kamus CSS</a>
+            <a href="tools.html">Tools</a>
+            <a href="tips.html">Tips</a>
+            <a href="about.html">Tentang</a>
+        </div>
+    </nav>
+
+    <!-- Header Halaman - Pengenalan materi HTML -->
+    <header class="revamp-header">
+        <h1>🌐 Belajar HTML</h1>
+        <p>Langkah Awal Menjadi Web Developer</p>
+        <div class="topic-badges">
+            <span class="badge">Dasar</span>
+            <span class="badge">Web Development</span>
+            <span class="badge">Tutorial</span>
+        </div>
+        <!-- Quick Navigation Pills -->
+        <div class="page-navigation">
+            <a href="#basics" class="nav-pill active">Dasar</a>
+            <a href="#elements" class="nav-pill">Elemen</a>
+            <a href="#practice" class="nav-pill">Praktik</a>
+            <a href="#resources" class="nav-pill">Referensi</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="learning-section">
+            <!-- Menu Navigasi Cepat - Akses langsung ke bagian tertentu -->
+            <div class="quick-nav card">
+                <h2>🗺️ Learning Path</h2>
+                <div class="nav-pills">
+                    <a href="#basics" class="pill active">Dasar HTML</a>
+                    <a href="#elements" class="pill">Elemen</a>
+                    <a href="#attributes" class="pill">Atribut</a>
+                    <a href="#practice" class="pill">Latihan</a>
+                </div>
+            </div>
+
+            <!-- Pengenalan HTML - Konsep dasar dan pengertian -->
+            <section id="basics" class="content-box with-pattern">
+                <h2>Apa itu HTML?</h2>
+                <p class="intro-text">
+                    HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk membuat halaman website. 
+                    Ini adalah fondasi dasar dari semua halaman web.
+                </p>
+                
+                <div class="key-points">
+                    <div class="point-card">
+                        <span class="point-icon">🏗️</span>
+                        <h3>Struktur</h3>
+                        <p>HTML membentuk struktur dan kerangka dasar website</p>
+                    </div>
+                    <div class="point-card">
+                        <span class="point-icon">📝</span>
+                        <h3>Konten</h3>
+                        <p>Mengatur semua konten seperti teks, gambar, dan video</p>
+                    </div>
+                    <div class="point-card">
+                        <span class="point-icon">🔗</span>
+                        <h3>Navigasi</h3>
+                        <p>Menghubungkan antar halaman dengan hyperlink</p>
+                    </div>
+                </div>
+
+                <!-- Diagram Struktur - Contoh struktur dokumen HTML -->
+                <div class="structure-diagram">
+                    <h3>Struktur Dokumen HTML</h3>
+                    <div class="code-preview">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Konten halaman --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <div class="structure-notes">
+                            <ul>
+                                <li>📌 <code>&lt;!DOCTYPE html&gt;</code> - Deklarasi HTML5</li>
+                                <li>📌 <code>&lt;head&gt;</code> - Informasi metadata</li>
+                                <li>📌 <code>&lt;body&gt;</code> - Konten yang ditampilkan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Demo -->
+                <div class="interactive-demo">
+                    <h3>Coba HTML Langsung</h3>
+                    <div class="demo-container">
+                        <div class="demo-editor">
+                            <textarea class="live-editor" spellcheck="false"><h1>Halo Dunia!</h1>
+<p>Ini adalah paragraf.</p></textarea>
+                        </div>
+                        <div class="demo-preview">
+                            <div class="preview-header">Output:</div>
+                            <div class="preview-frame"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Elemen HTML - Penjelasan tag-tag dasar -->
+            <section id="elements" class="content-box">
+                <h2>Elemen HTML Dasar</h2>
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <h3>Teks</h3>
+                        <div class="code-sample">
+                            <code>&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;Paragraf&lt;/p&gt;</code>
+                            <div class="preview">
+                                <h1 style="font-size: 1.5em">Heading</h1>
+                                <p>Paragraf</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="element-card">
+                        <h3>Link & Gambar</h3>
+                        <div class="code-sample">
+                            <code>&lt;a href="#"&gt;Link&lt;/a&gt;
+&lt;img src="gambar.jpg" alt="Deskripsi"&gt;</code>
+                            <div class="preview">
+                                <a href="#" class="demo-link">Link</a>
+                                <div class="demo-img">🖼️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Playground - Area praktik langsung HTML -->
+            <section id="practice" class="practice-section">
+                <h2>Code Playground</h2>
+                <div class="playground-container">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span>HTML Editor</span>
+                            <div class="editor-controls">
+                                <button class="reset-btn" title="Reset Code">↺</button>
+                                <button class="run-btn" title="Run Code">▶ Run</button>
+                            </div>
+                        </div>
+                        <textarea class="editor-textarea" spellcheck="false"><!-- Template awal -->
+<h1>Selamat Datang di HTML Playground</h1>
+<p>Ini adalah area untuk berlatih kode HTML.</p>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<a href="#">Klik Saya</a></textarea>
+                    </div>
+                    <div class="preview-pane">
+                        <div class="preview-header">
+                            <span>Output Preview</span>
+                            <button class="toggle-preview" title="Toggle Preview">👁️</button>
+                        </div>
+                        <div class="preview-content"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referensi Tambahan - Sumber belajar lanjutan -->
+            <section id="resources" class="resources-box">
+                <h2>Referensi & Tools</h2>
+                <div class="resources-grid">
+                    <a href="kamus.html" class="resource-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Kamus HTML</h3>
+                        <p>Referensi lengkap tag HTML</p>
+                    </a>
+                    <a href="tools.html" class="resource-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                        <p>Editor dan alat pengembangan</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer - Informasi hak cipta -->
+    <footer>
+        &copy; 2025 Web Edukasi Mini - Dibuat dengan ❤️ oleh Muhammad Syafri
+    </footer>
+
+    <!-- Script Interaktif - Fungsi untuk Code Playground -->
+    <script>
+        // Fungsionalitas Code Playground - Memperbarui preview saat kode dijalankan
+        const editor = document.querySelector('.editor-textarea');
+        const preview = document.querySelector('.preview-content');
+        const runBtn = document.querySelector('.run-btn');
+        const resetBtn = document.querySelector('.reset-btn');
+        const togglePreview = document.querySelector('.toggle-preview');
+        
+        // Simpan kode template awal
+        const defaultCode = editor.value;
+
+        // Update preview saat kode dijalankan
+        function updatePreview() {
+            preview.innerHTML = editor.value;
+        }
+
+        // Reset kode ke template awal
+        function resetCode() {
+            editor.value = defaultCode;
+            updatePreview();
+        }
+
+        // Toggle preview pane
+        function togglePreviewPane() {
+            const previewPane = document.querySelector('.preview-pane');
+            previewPane.classList.toggle('hidden');
+            togglePreview.textContent = previewPane.classList.contains('hidden') ? '👁️‍🗨️' : '👁️';
+        }
+
+        // Event listeners
+        runBtn.addEventListener('click', updatePreview);
+        resetBtn.addEventListener('click', resetCode);
+        togglePreview.addEventListener('click', togglePreviewPane);
+        
+        // Auto-update saat mengetik (opsional)
+        editor.addEventListener('input', () => {
+            if (document.querySelector('#auto-update').checked) {
+                updatePreview();
+            }
+        });
+
+        // Initial render
+        updatePreview();
+
+        // Live Preview Functionality
+        const liveEditor = document.querySelector('.live-editor');
+        const previewFrame = document.querySelector('.preview-frame');
+
+        function updateLivePreview() {
+            previewFrame.innerHTML = liveEditor.value;
+        }
+
+        liveEditor.addEventListener('input', updateLivePreview);
+        updateLivePreview();
+
+        // Smooth Scroll for Navigation Pills
+        document.querySelectorAll('.nav-pill').forEach(pill => {
+            pill.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

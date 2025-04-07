@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Konfigurasi Dasar - Meta tags dan resources -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu Navigasi - Akses ke halaman website -->
+    <nav class="navbar">
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="html.html">HTML</a>
+            <a href="kamus.html">Kamus HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="kamus-css.html">Kamus CSS</a>
+            <a href="tools.html">Tools</a>
+            <a href="tips.html" class="active">Tips</a>
+            <a href="about.html">Tentang</a>
+        </div>
+    </nav>
+
+    <!-- Header Tips - Judul dan filter kategori -->
+    <header class="revamp-header">
+        <h1>💡 Tips & Best Practices</h1>
+        <p>Panduan praktis untuk pengembangan web yang lebih baik</p>
+        
+        <!-- Filter Kategori - Pemilihan jenis tips -->
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">Semua</button>
+            <button class="filter-btn" data-category="html">HTML</button>
+            <button class="filter-btn" data-category="css">CSS</button>
+            <button class="filter-btn" data-category="practice">Praktik</button>
+        </div>
+    </header>
+
+    <!-- Konten Tips - Kumpulan tips pengembangan -->
+    <main class="container">
+        <div class="tips-grid">
+            <!-- Tips HTML - Praktik terbaik HTML -->
+            <article class="tip-card" data-category="html">
+                <div class="tip-header">
+                    <span class="tip-badge">HTML</span>
+                    <h2>Semantic HTML</h2>
+                </div>
+                <div class="tip-content">
+                    <p>Gunakan tag HTML yang sesuai dengan makna kontennya untuk meningkatkan aksesibilitas dan SEO.</p>
+                    <div class="code-sample">
+                        <div class="code-header">
+                            <span>✨ Best Practice</span>
+                            <button class="copy-btn">Salin</button>
+                        </div>
+                        <pre><code>&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tips CSS - Teknik styling efektif -->
+            <article class="tip-card" data-category="css">
+                <div class="tip-header">
+                    <span class="tip-badge">CSS</span>
+                    <h2>Modern Layout</h2>
+                </div>
+                <div class="tip-content">
+                    <p>Manfaatkan Flexbox dan Grid untuk layout yang responsif dan mudah dikelola.</p>
+                    <div class="code-sample">
+                        <div class="code-header">
+                            <span>🎨 Modern CSS</span>
+                            <button class="copy-btn">Salin</button>
+                        </div>
+                        <pre><code>.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tips Version Control - Panduan Git -->
+            <article class="tip-card" data-category="practice">
+                <div class="tip-header">
+                    <span class="tip-badge">Practice</span>
+                    <h2>Version Control</h2>
+                </div>
+                <div class="tip-content">
+                    <p>Gunakan Git untuk melacak perubahan kode dan berkolaborasi dengan tim.</p>
+                    <ul class="checklist">
+                        <li>Commit secara teratur</li>
+                        <li>Tulis pesan commit yang jelas</li>
+                        <li>Gunakan branching untuk fitur baru</li>
+                        <li>Review kode sebelum merge</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Quick Tips - Tips cepat harian -->
+            <article class="tip-card highlight" data-category="practice">
+                <div class="tip-header">
+                    <span class="tip-badge">Quick Tips</span>
+                    <h2>Tips Harian</h2>
+                </div>
+                <div class="tip-content">
+                    <ul class="quick-tips">
+                        <li>🔍 Selalu validasi HTML menggunakan W3C Validator</li>
+                        <li>📱 Test website di berbagai ukuran layar</li>
+                        <li>⚡ Optimasi gambar sebelum upload</li>
+                        <li>📝 Dokumentasikan kode dengan baik</li>
+                        <li>🎨 Jaga konsistensi dalam styling</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Script Filter - Fungsi filter tips dan salin kode -->
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const tipCards = document.querySelectorAll('.tip-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                tipCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const code = btn.closest('.code-sample').querySelector('code').textContent;
+                await navigator.clipboard.writeText(code);
+                
+                btn.textContent = 'Tersalin!';
+                setTimeout(() => {
+                    btn.textContent = 'Salin';
+                }, 2000);
+            });
+        });
+    </script>
+
+    <!-- Footer - Copyright -->
+    <footer>
+        &copy; 2025 Web Edukasi Mini - Dibuat dengan ❤️ oleh Muhammad Syafri
+    </footer>
+</body>
+</html>

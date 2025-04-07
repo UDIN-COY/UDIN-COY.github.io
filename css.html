@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <!-- 
+    Bagian Head:
+    Berisi metadata seperti charset, viewport, dan tautan ke file CSS.
+    Digunakan untuk mengatur informasi dasar halaman web.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengenalan CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- 
+    Navigasi:
+    Menampilkan menu navigasi untuk berpindah antar halaman.
+  -->
+  <nav class="navbar">
+    <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="html.html">HTML</a>
+      <a href="kamus.html">Kamus HTML</a>
+      <a href="css.html" class="active">CSS</a>
+      <a href="kamus-css.html">Kamus CSS</a>
+      <a href="tools.html">Tools</a>
+      <a href="tips.html">Tips</a>
+      <a href="about.html">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- 
+    Bagian Header:
+    Menampilkan judul halaman dan deskripsi singkat.
+  -->
+  <header class="revamp-header">
+    <h1>🎨 Belajar CSS</h1>
+    <p>Memberi gaya pada tampilan web</p>
+    <div class="topic-badges">
+      <span class="badge">Dasar</span>
+      <span class="badge">Styling</span>
+      <span class="badge">Layout</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="learning-section">
+      <!-- 
+        Pengenalan CSS:
+        Penjelasan dasar tentang CSS.
+      -->
+      <section class="content-box">
+        <h2>Apa itu CSS?</h2>
+        <p class="intro-text">
+          CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan dan layout website.
+          Dengan CSS, kita bisa mengubah warna, ukuran, jarak, dan banyak aspek visual lainnya.
+        </p>
+        
+        <div class="key-points">
+          <div class="point-card">
+            <span class="point-icon">🎨</span>
+            <h3>Styling</h3>
+            <p>Mengatur warna, font, dan tampilan visual</p>
+          </div>
+          <div class="point-card">
+            <span class="point-icon">📐</span>
+            <h3>Layout</h3>
+            <p>Mengatur tata letak dan struktur halaman</p>
+          </div>
+          <div class="point-card">
+            <span class="point-icon">📱</span>
+            <h3>Responsive</h3>
+            <p>Membuat tampilan adaptif di berbagai perangkat</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        Metode Penulisan CSS:
+        Menjelaskan cara menerapkan CSS ke HTML.
+      -->
+      <section class="code-section">
+        <h2>Dasar CSS</h2>
+        <p>Ada tiga cara menerapkan CSS ke HTML:</p>
+
+        <div class="code-examples">
+          <!-- Inline CSS -->
+          <div class="code-example">
+            <div class="code-header">
+              <span>1. Inline CSS</span>
+              <button class="copy-btn">Salin</button>
+            </div>
+            <pre><code>&lt;p style="color: blue; font-size: 16px;"&gt;Teks Biru&lt;/p&gt;</code></pre>
+          </div>
+
+          <!-- Internal CSS -->
+          <div class="code-example">
+            <div class="code-header">
+              <span>2. Internal CSS</span>
+              <button class="copy-btn">Salin</button>
+            </div>
+            <pre><code>&lt;style&gt;
+  p {
+    color: blue;
+    font-size: 16px;
+  }
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <!-- External CSS -->
+          <div class="code-example">
+            <div class="code-header">
+              <span>3. External CSS</span>
+              <button class="copy-btn">Salin</button>
+            </div>
+            <pre><code>/* style.css */
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+/* HTML */
+&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        CSS Selectors:
+        Menjelaskan cara memilih elemen untuk styling.
+      -->
+      <section class="content-box">
+        <h2>CSS Selectors</h2>
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>Element Selector</h3>
+            <code>p { color: blue; }</code>
+            <p>Memilih semua elemen &lt;p&gt;</p>
+          </div>
+          <div class="selector-card">
+            <h3>Class Selector</h3>
+            <code>.navbar { background: black; }</code>
+            <p>Memilih elemen dengan class="navbar"</p>
+          </div>
+          <div class="selector-card">
+            <h3>ID Selector</h3>
+            <code>#header { height: 100px; }</code>
+            <p>Memilih elemen dengan id="header"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        Area Praktik:
+        Tempat mencoba kode CSS.
+      -->
+      <section class="practice-section">
+        <h2>Mari Mencoba!</h2>
+        <div class="practice-box">
+          <h3>Latihan: Styling Sederhana</h3>
+          <div class="playground">
+            <div class="editor">
+              <pre><code>.box {
+  width: 200px;
+  height: 200px;
+  background: #3498db;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  background: #2980b9;
+}</code></pre>
+            </div>
+            <div class="preview">
+              <div class="box"></div>
+            </div>
+          </div>
+          <div class="action-buttons">
+            <button class="btn-primary">Lihat Demo</button>
+            <button class="btn-secondary">Reset</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 
+    Footer:
+    Menampilkan informasi hak cipta.
+  -->
+  <footer>
+    &copy; 2025 Web Edukasi Mini - Dibuat dengan ❤️ oleh Muhammad Syafri
+  </footer>
+
+  <!-- 
+    Script:
+    Menambahkan fitur salin kode.
+  -->
+  <script>
+    // Copy button functionality
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.code-example').querySelector('code').textContent;
+        navigator.clipboard.writeText(code);
+        btn.textContent = 'Tersalin!';
+        setTimeout(() => btn.textContent = 'Salin', 2000);
+      });
+    });
+  </script>
+</body>
+
+</html>
